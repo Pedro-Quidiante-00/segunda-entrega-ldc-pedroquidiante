@@ -1,0 +1,41 @@
+---
+import {Image} from "astro:assets";
+import imgOrigenes from "../../assets/images/bg-img-00.png";
+
+interface Props{
+    titulo:string;
+    texto:string;
+    titulo1:string;
+    texto1:string;
+}
+const {titulo, texto, titulo1, texto1} = Astro.props
+---
+<section class="py-16 px-8">
+    <div class="max-w-6xl mx-auto">
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-12 items-center mb-16">
+            <div>
+                <h2 class="text-4xl font-bold text-black mb-6">{titulo}</h2>
+                <div class="space-y-4 text-gray-700 leading-relaxed" set:html={texto} />
+            </div>
+            <div class="w-full h-96 rounded-2xl border-2 border-red-600 flex items-center justify-center overflow-hidden shadow-lg">
+                <Image src={imgOrigenes} alt="Vista de los orígenes del liceo" class="w-full h-full object-cover" />
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="py-16 px-8 z-30">
+    <div class="max-w-6xl mx-auto">
+        <div class="bg-white rounded-2xl p-8 shadow-lg flex flex-col lg:flex-row-reverse items-center gap-12">
+            <div class="lg:w-1/2">
+                <h3 class="text-4xl font-bold text-black mb-6">{titulo1}</h3>
+                <div class="space-y-4 text-gray-700 leading-relaxed" set:html={texto1} />
+            </div>
+            <div class="lg:w-1/2">
+                <div class="w-full h-96 rounded-2xl border-2 border-red-600 flex items-center justify-center overflow-hidden shadow-lg">
+                    <Image src={imgOrigenes} alt="Vista de los orígenes del liceo" class="w-full h-full object-cover" />
+                </div>
+            </div>
+        </div>
+    </div>
+</section>

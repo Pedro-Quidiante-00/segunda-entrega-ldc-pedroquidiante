@@ -1,0 +1,31 @@
+---
+import {Image} from "astro:assets"
+import ImgCra from "../../assets/images/bg-img-00.png"
+
+interface Props {
+    titulo: string;
+    texto: string;
+}
+const {titulo, texto} = Astro.props
+---
+
+<section class="py-16">
+    <div class="max-w-6xl mx-auto px-6">
+        <div class="grid md:grid-cols-2 gap-12 items-center">
+            <div>
+                <Image
+                        src = {ImgCra}
+                        alt= "Interior de la biblioteca CRA"
+                        class= "rounded-2xl shadow-lg border-8 border-gray-100"
+                />
+            </div>
+            <div>
+                <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-6">
+                    {titulo}
+
+                </h2>
+                <p class="text-lg text-gray-600 mb-4 leading-relaxed" set:html={texto}/>
+            </div>
+        </div>
+    </div>
+</section>

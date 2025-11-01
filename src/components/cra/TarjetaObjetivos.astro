@@ -1,0 +1,48 @@
+---
+import { Icon } from "astro-icon/components";
+const objetivos = [
+    {
+        Icono: "book",
+        titulo: "Fomentar Lectura",
+        texto: "Incentivar el hábito y el placer de la lectura en toda la comunidad educativa."
+    },
+    {
+        Icono: "lupa",
+        titulo: "Apoyar la Investigación",
+        texto: "Proveer recursos y guiar a los estudiantes en el desarrollo de habilidades investigativas."
+    },
+    {
+        Icono: "conf",
+        titulo: "Integrar Tecnologías",
+        texto: "Facilitar el acceso y uso de herramientas digitales para el aprendizaje."
+    },
+    {
+        Icono: "check",
+        titulo: "Crear un Espacio Acogedor",
+        texto: "Ofrecer un ambiente tranquilo y propicio para el estudio y la concentración."
+    },
+];
+const tituloSeccion = "Nuestros Objetivos";
+---
+<section class="py-16">
+    <div class="max-w-6xl mx-auto px-6">
+        <div class="text-center mb-12">
+            <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
+                {tituloSeccion}
+            </h2>
+            <div class="w-24 h-1 bg-red-600 mx-auto rounded-full"></div>
+        </div>
+        <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+            {objetivos.map((objetivo) => (
+                    <div class="bg-white p-6 rounded-xl text-center shadow-md hover:shadow-xl transition-shadow">
+
+                        <div class="w-20 h-20 mx-auto mb-4 bg-red-100 rounded-full flex items-center justify-center text-red-800">
+                            <Icon name={objetivo.Icono} class="w-8 h-8"/>
+                        </div>
+                        <h3 class="font-bold text-lg mb-2 text-gray-900">{objetivo.titulo}</h3>
+                        <p class="text-sm text-gray-600">{objetivo.texto}</p>
+                    </div>
+            ))}
+        </div>
+    </div>
+</section>

@@ -1,0 +1,34 @@
+---
+import Layout from '../layouts/Layout.astro';
+import HeroSubPaginaComponent from '../components/ui/HeroSubPaginasComponent.astro'
+import VisiMisiComponente from '../components/sobre-nosotros/VisiMisiComponente.astro';
+import Valores from '../components/servicios-y-recursos/valores.astro';
+---
+<Layout>
+    <HeroSubPaginaComponent subtitulo="Conoce nuestra filosofía, valores y al equipo que da vida a este proyecto." titulo="Sobre Nosotros"/>
+
+    <VisiMisiComponente
+            titulo="Nuestra Misión y Visión"
+            texto={`
+        <p>Somos una institución comprometida con la formación integral de jóvenes, combinando una sólida base académica con el desarrollo profundo del talento artístico. Creemos en el arte como una herramienta fundamental para el desarrollo humano.</p>
+        <p>Nuestra misión es formar estudiantes críticos, creativos y sensibles, capaces de liderar y transformar positivamente su entorno cultural y social.</p>
+    `}
+            titulo1="Cuerpo Docente"
+            texto1={`
+        <p>Nuestro equipo está compuesto por profesionales activos en sus disciplinas artísticas y académicos de alto nivel.</p>
+        <p>Esta dualidad asegura que los estudiantes reciban una formación conectada con el mundo real y con la vanguardia del conocimiento, siendo mentores además de profesores.</p>
+    `}
+    />
+    <Valores titulo="Nuestros Valores Fundamentales"
+             tituloCol1="Excelencia y Rigor"
+             textoCol1={`
+                <p>Perseguimos la excelencia tanto en las disciplinas académicas como en las artísticas. Fomentamos la disciplina, el esfuerzo y el rigor intelectual como pilares para alcanzar la maestría.</p>
+            `}
+             tituloCol2="Pilares del Liceo"
+             listaCol2={[
+                 'Creatividad: Fomentar la originalidad y la expresión.',
+                 'Colaboración: El arte se construye en comunidad.',
+                 'Sensibilidad: Desarrollar la empatía y la apreciación estética.',
+                 'Respeto: Valorar la diversidad de ideas y expresiones.'
+             ]}/>
+</Layout>

@@ -1,0 +1,31 @@
+---
+import type { ImageMetadata } from 'astro';
+
+import noticiaImg1 from '../../assets/images/bg-img-00.png';
+import noticiaImg2 from '../../assets/images/bg-img-00.png';
+import noticiaImg3 from '../../assets/images/bg-img-00.png';
+
+export const ultimasNoticias = [
+    {
+        enlace: "blog/noticia-1.html",
+        imagen: noticiaImg1,
+        categoria: "Eventos",
+        titulo: "Festival de Artes 2024: Celebración de Creatividad",
+        descripcion: "Nuestros estudiantes brillaron en el festival anual mostrando sus talentos."
+    },
+    {
+        enlace: "blog/noticia-2.html",
+        imagen: noticiaImg2,
+        categoria: "Logros",
+        titulo: "Estudiantes Ganan Concurso Nacional de Música",
+        descripcion: "El coro y la banda obtuvieron el primer lugar en el prestigioso concurso nacional."
+    },
+    {
+        enlace: "blog/noticia-3.html",
+        imagen: noticiaImg3,
+        categoria: "Inauguración",
+        titulo: "Nuevos Estudios de Grabación y Salas de Danza",
+        descripcion: "Inauguramos modernas instalaciones para potenciar el aprendizaje."
+    }
+];
+---

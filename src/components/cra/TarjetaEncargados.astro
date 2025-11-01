@@ -1,0 +1,47 @@
+---
+const encargados = [
+    {
+        nombre: "María Elena Torres",
+        cargo: "Coordinadora CRA",
+        iconoSVG: 'M12,4A4,4 0 0,1 16,8A4,4 0 0,1 12,12A4,4 0 0,1 8,8A4,4 0 0,1 12,4M12,14C16.42,14 20,15.79 20,18V20H4V18C4,15.79 7.58,14 12,14Z' // Path del ícono de usuario
+    },
+    {
+        nombre: "Carmen Valenzuela",
+        cargo: "Asistente Biblioteca",
+        iconoSVG: 'M12,4A4,4 0 0,1 16,8A4,4 0 0,1 12,12A4,4 0 0,1 8,8A4,4 0 0,1 12,4M12,14C16.42,14 20,15.79 20,18V20H4V18C4,15.79 7.58,14 12,14Z'
+    },
+    {
+        nombre: "Patricia Morales",
+        cargo: "Encargada Recursos Digitales",
+        iconoSVG: 'M12,4A4,4 0 0,1 16,8A4,4 0 0,1 12,12A4,4 0 0,1 8,8A4,4 0 0,1 12,4M12,14C16.42,14 20,15.79 20,18V20H4V18C4,15.79 7.58,14 12,14Z'
+    },
+];
+interface Props {
+    titulo: string;
+    texto: string;
+}
+const {titulo, texto} = Astro.props
+---
+<section class="py-16">
+    <div class="max-w-6xl mx-auto px-6">
+
+        <div class="text-center mb-12">
+            <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-4">{titulo}</h2>
+            <p class="text-lg text-gray-600">{texto}</p>
+        </div>
+        <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+            {encargados.map((encargado) => (
+                    <div class="bg-gray-50 p-6 rounded-xl text-center hover:shadow-lg transition-shadow">
+
+                        <div class="w-24 h-24 mx-auto mb-4 bg-red-600 rounded-full flex items-center justify-center">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="w-12 h-12 fill-white" viewBox="0 0 24 24">
+                                <path d={encargado.iconoSVG} />
+                            </svg>
+                        </div>
+                        <h3 class="text-xl font-bold text-gray-900 mb-2">{encargado.nombre}</h3>
+                        <p class="text-red-600 font-semibold mb-3">{encargado.cargo}</p>
+                    </div>
+            ))}
+        </div>
+    </div>
+</section>

@@ -1,0 +1,46 @@
+---
+import ServiTarjetas from "./ServiTarjetas.astro";
+
+const servicios = [
+    {
+        icono: 'documen',
+        titulo: 'Documentación',
+        descripcion: 'Accede a formularios, certificados, reglamentos y toda la documentación oficial del establecimiento.',
+        enlaceUrl: '/documentacion',
+        textoBoton: 'Acceder'},
+    {
+        icono: 'infraestru',
+        titulo: 'Infraestructura',
+        descripcion: 'Conoce nuestras modernas instalaciones, salas especializadas y espacios de aprendizaje.',
+        enlaceUrl: '/blog/infraestructura',
+        textoBoton: 'Explorar'},
+    {
+        icono: 'book',
+        titulo: 'Biblioteca CRA',
+        descripcion: 'Explora nuestro Centro de Recursos de Aprendizaje con0material bibliográfico y digital.',
+        enlaceUrl: '/blog/cra',
+        textoBoton: 'Explorar'}
+];
+---
+<section class="py-16 px-8">
+    <div class="max-w-6xl mx-auto">
+        <div class="text-center mb-16">
+            <h2 class="text-4xl font-bold text-black mb-4 drop-shadow-xl">
+                Servicios y Recursos
+            </h2>
+            <p class="desc">
+                Descubre todos los servicios y recursos disponibles para apoyar tu experiencia educativa en nuestro liceo.
+            </p>
+        </div>
+        <div class="grid grid-cols-1 lg:grid-cols-3 gap-6">
+            {servicios.map(servicio => (
+                    <ServiTarjetas
+                            icono={servicio.icono}
+                            titulo={servicio.titulo}
+                            descripcion={servicio.descripcion}
+                            url={servicio.enlaceUrl}
+                            textoBoton={servicio.textoBoton}/>
+            ))}
+        </div>
+    </div>
+</section>

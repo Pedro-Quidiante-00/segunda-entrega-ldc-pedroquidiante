@@ -1,0 +1,31 @@
+---
+ interface Props {
+    titulo: string;
+    tituloCol1: string;
+    textoCol1: string;
+    tituloCol2: string;
+    listaCol2: string[];
+}
+const { titulo, tituloCol1, textoCol1, tituloCol2, listaCol2 } = Astro.props;
+---
+<section class="mb-20 max-w-6xl mx-auto bg-white rounded-3xl p-8 shadow-lg">
+    <h3 class="text-3xl font-bold text-red-600 mb-6">{titulo}</h3>
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-8 mb-8">
+
+        <div>
+            <h4 class="text-xl font-semibold text-black mb-4">{tituloCol1}</h4>
+            <div class="desc-b" set:html={textoCol1} />
+        </div>
+
+        <div>
+            <h4 class="text-xl font-semibold text-black mb-4">{tituloCol2}</h4>
+            <ul class="text-gray-700 space-y-2">
+                {listaCol2.map((item) => (
+                        <li class="flex items-start">
+                            <span class="text-red-600 mr-2">•</span>{item}
+                        </li>
+                ))}
+            </ul>
+        </div>
+    </div>
+</section>
