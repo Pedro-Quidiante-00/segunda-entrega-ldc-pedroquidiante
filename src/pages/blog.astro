@@ -1,0 +1,83 @@
+---
+import Layout from '../layouts/Layout.astro';
+import HeroSubPaginaComponent from '../components/ui/HeroSubPaginasComponent.astro'
+---
+<Layout>
+    <HeroSubPaginaComponent titulo="Blog y Noticias" subtitulo="Eventos, artículos y novedades de nuestra comunidad artística y académica."/>
+    <section class="py-16 px-8">
+        <div class="max-w-6xl mx-auto">
+            <div class="text-center mb-16">
+                <h2 class="text-4xl font-bold text-black mb-4">
+                    Últimas Publicaciones
+                </h2>
+                <div class="w-24 h-1 bg-red-600 mx-auto rounded-full"></div>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+
+                <div class="bg-white rounded-2xl shadow-lg overflow-hidden flex flex-col">
+                    <div class="w-full h-48 overflow-hidden">
+                        <img src="/src/assets/images/blog/articulo-1.png" alt="Estudiantes en taller de teatro" class="w-full h-full object-cover transition-transform duration-300 hover:scale-110" />
+                    </div>
+
+                    <div class="p-6 flex-grow">
+                        <p class="text-red-600 text-sm font-semibold mb-2">Eventos</p>
+                        <h3 class="text-2xl font-bold text-black mb-3">
+                            Nuevo Taller de Teatro Musical
+                        </h3>
+                        <p class="text-gray-700 leading-relaxed mb-4">
+                            Nuestros estudiantes de 3er año exploran el West End en un nuevo montaje intensivo...
+                        </p>
+                    </div>
+
+                    <div class="p-6 pt-0">
+                        <a href="/blog/taller-teatro" class="text-red-600 font-bold hover:text-red-700 transition-all">
+                            Leer Más →
+                        </a>
+                    </div>
+                </div>
+
+                <div class="bg-white rounded-2xl shadow-lg overflow-hidden flex flex-col">
+                    <div class="w-full h-48 overflow-hidden">
+                        <img src="/src/assets/images/blog/articulo-2.png" alt="Exposición de arte" class="w-full h-full object-cover transition-transform duration-300 hover:scale-110" />
+                    </div>
+                    <div class="p-6 flex-grow">
+                        <p class="text-blue-600 text-sm font-semibold mb-2">Artes Visuales</p>
+                        <h3 class="text-2xl font-bold text-black mb-3">
+                            Exposición Anual de Grabado
+                        </h3>
+                        <p class="text-gray-700 leading-relaxed mb-4">
+                            La generación 2025 presenta sus trabajos finales en la galería de la ciudad...
+                        </p>
+                    </div>
+                    <div class="p-6 pt-0">
+                        <a href="/blog/expo-grabado" class="text-red-600 font-bold hover:text-red-700 transition-all">
+                            Leer Más →
+                        </a>
+                    </div>
+                </div>
+
+                <div class="bg-white rounded-2xl shadow-lg overflow-hidden flex flex-col">
+                    <div class="w-full h-48 overflow-hidden">
+                        <img src="/src/assets/images/blog/articulo-3.png" alt="Orquesta de cámara" class="w-full h-full object-cover transition-transform duration-300 hover:scale-110" />
+                    </div>
+                    <div class="p-6 flex-grow">
+                        <p class="text-yellow-600 text-sm font-semibold mb-2">Música</p>
+                        <h3 class="text-2xl font-bold text-black mb-3">
+                            Gira de la Orquesta de Cámara
+                        </h3>
+                        <p class="text-gray-700 leading-relaxed mb-4">
+                            El ensamble del liceo inicia su gira por el sur del país, llevando la música clásica...
+                        </p>
+                    </div>
+                    <div class="p-6 pt-0">
+                        <a href="/blog/gira-orquesta" class="text-red-600 font-bold hover:text-red-700 transition-all">
+                            Leer Más →
+                        </a>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+</Layout>

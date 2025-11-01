@@ -1,0 +1,29 @@
+---
+// src/components/NavDropdown.astro
+import { Icon } from 'astro-icon/components';
+
+interface Props {
+    text: string;
+    icon: string;
+    submenu: { href: string; icon: string; text: string; }[];
+}
+
+const { text, icon, submenu } = Astro.props;
+---
+
+<li class="relative group">
+    <a href="#" class="menu">
+        <Icon name={icon} class="menu-i" />
+        {text}
+        <Icon name="arrow" class="w-4 h-4 ml-1 px-1 transition-transform duration-300 group-hover:rotate-180" />
+    </a>
+    <div class="menu-m">
+
+        {submenu.map((item) => (
+                <a href={item.href} class="menu-md">
+                    <Icon name={item.icon} class="menu-i" />
+                    {item.text}
+                </a>
+        ))}
+    </div>
+</li>

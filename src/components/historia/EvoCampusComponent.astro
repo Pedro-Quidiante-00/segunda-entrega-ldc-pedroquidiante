@@ -1,0 +1,65 @@
+---
+import {Image} from "astro:assets";
+import imgOrigenes from "../../assets/images/bg-img-00.png";
+
+interface Props {
+    titulo: string;
+    texto: string;
+    titulo1: string;
+    texto1: string;
+    titulo2: string;
+    texto2: string;
+}
+const {titulo, texto, titulo1, texto1, titulo2, texto2} = Astro.props
+---
+<section class="py-16 px-8 z-30">
+    <div class="max-w-6xl mx-auto">
+        <div class="bg-white rounded-2xl p-8 shadow-lg flex flex-col lg:flex-row items-center gap-12">
+
+            <div class="lg:w-1/2">
+                <h3 class="text-2xl font-bold text-red-500 mb-4">{titulo}</h3>
+                <p class="text-gray-700 leading-relaxed mb-4">{texto}</p>
+            </div>
+
+            <div class="lg:w-1/2">
+                <div class="w-full h-96 rounded-2xl border-2 border-red-600 flex items-center justify-center overflow-hidden shadow-lg">
+                    <Image src={imgOrigenes} alt="Vista de los orígenes del liceo" class="w-full h-full object-cover" />
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<section class="py-16 px-8 z-30">
+    <div class="max-w-6xl mx-auto">
+        <div class="bg-white rounded-2xl p-8 shadow-lg flex flex-col lg:flex-row-reverse items-center gap-12">
+
+            <div class="lg:w-1/2">
+                <h3 class="text-2xl font-bold text-red-500 mb-4">{titulo1}</h3>
+                <p class="text-gray-700 leading-relaxed mb-4">{texto1}</p>
+            </div>
+
+            <div class="lg:w-1/2">
+                <div class="w-full h-96 rounded-2xl border-2 border-blue-600 flex items-center justify-center overflow-hidden shadow-lg">
+                    <Image src={imgOrigenes} alt="Vista de los orígenes del liceo" class="w-full h-full object-cover" />
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<section class="py-16 px-8 z-30">
+    <div class="max-w-6xl mx-auto">
+        <div class="bg-white rounded-2xl p-8 shadow-lg flex flex-col lg:flex-row items-center gap-12">
+
+            <div class="lg:w-1/2">
+                <h3 class="text-2xl font-bold text-red-500 mb-4">{titulo2}</h3>
+                <p class="text-gray-700 leading-relaxed mb-4">{texto2}</p>
+            </div>
+
+            <div class="lg:w-1/2">
+                <div class="w-full h-96 rounded-2xl border-2 border-yellow-600 flex items-center justify-center overflow-hidden shadow-lg">
+                    <Image src={imgOrigenes} alt="Vista de los orígenes del liceo" class="w-full h-full object-cover" />
+                </div>
+            </div>
+        </div>
+    </div>
+</section>

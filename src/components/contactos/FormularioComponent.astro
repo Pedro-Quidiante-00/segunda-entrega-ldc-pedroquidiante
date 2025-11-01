@@ -1,0 +1,73 @@
+---
+export interface Props {
+    titulo: string;
+    subtitulo: string;
+}
+const { titulo, subtitulo } = Astro.props;
+---
+<div class="bg-white p-8 rounded-xl shadow-lg z-30">
+    <h2 class="text-3xl font-bold text-gray-900 mb-6">{titulo}</h2>
+    <p class="text-gray-600 mb-8">{subtitulo}</p>
+
+    <form id="contactForm" action="mailto:pedroalajandro.quidiante@alumnos.ulagos.cl" method="POST" enctype="text/plain" class="space-y-6">
+        <div>
+            <label for="nombre" class="block text-sm font-semibold text-gray-700 mb-2">
+                Nombre Completo *
+            </label>
+            <input type="text" id="nombre" name="Nombre" required
+                   class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-red-500 focus:border-transparent transition-all"
+                   placeholder="Tu nombre completo">
+        </div>
+
+        <div>
+            <label for="email" class="block text-sm font-semibold text-gray-700 mb-2">
+                Correo Electrónico *
+            </label>
+            <input type="email" id="email" name="Email" required
+                   class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-red-500 focus:border-transparent transition-all"
+                   placeholder="tu@email.com">
+        </div>
+
+        <div>
+            <label for="telefono" class="block text-sm font-semibold text-gray-700 mb-2">
+                Teléfono
+            </label>
+            <input type="tel" id="telefono" name="Teléfono"
+                   class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-red-500 focus:border-transparent transition-all"
+                   placeholder="+56 9 1234 5678">
+        </div>
+
+        <div>
+            <label for="asunto" class="block text-sm font-semibold text-gray-700 mb-2">
+                Asunto *
+            </label>
+            <select id="asunto" name="Asunto" required
+                    class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-red-500 focus:border-transparent transition-all">
+                <option value="">Selecciona un asunto</option>
+                <option value="Información sobre Admisión">Información sobre Admisión</option>
+                <option value="Consulta sobre Especialidades">Consulta sobre Especialidades</option>
+                <option value="Malla Curricular">Malla Curricular</option>
+                <option value="Solicitar Visita al Liceo">Solicitar Visita al Liceo</option>
+                <option value="Otro">Otro</option>
+            </select>
+        </div>
+
+        <div>
+            <label for="mensaje" class="block text-sm font-semibold text-gray-700 mb-2">
+                Mensaje *
+            </label>
+            <textarea id="mensaje" name="Mensaje" rows="5" required
+                      class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-red-500 focus:border-transparent transition-all resize-none"
+                      placeholder="Escribe tu mensaje aquí..."></textarea>
+        </div>
+
+        <button type="submit"
+                class="w-full bg-red-600 text-white font-bold py-4 px-6 rounded-lg hover:bg-red-700 transition-all duration-300 transform hover:scale-105 shadow-lg">
+            Enviar Mensaje
+        </button>
+
+        <p class="text-xs text-gray-500 text-center">
+            * Campos obligatorios
+        </p>
+    </form>
+</div>

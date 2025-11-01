@@ -1,0 +1,82 @@
+---
+import Layout from '../layouts/Layout.astro';
+import HeroSubPaginaComponent from '../components/ui/HeroSubPaginasComponent.astro'
+import IntroHistoriaComponent from '../components/historia/IntroHistoriaComponent.astro';
+import DecadasHistoriaComponent from "../components/historia/DecadasHistoriaComponent.astro";
+import EvoCampusComponent from '../components/historia/EvoCampusComponent.astro';
+---
+<Layout>
+    <!-- Hero Section -->
+    <HeroSubPaginaComponent
+            titulo="Historia Detallada del Liceo"
+            subtitulo=" Un recorrido profundo por más de 25 años formando artistas integrales" />
+    <!-- INTRODUCCIÓN HISTÓRICA -->
+    <IntroHistoriaComponent
+            titulo="Los Orígenes de Una Visión">
+        <p>
+            A finales de los años 90, un grupo de educadores y artistas visionarios identificó una necesidad crítica en el sistema educativo: la falta de instituciones que combinaran la excelencia académica tradicional con una formación artística integral y de calidad.
+        </p>
+        <p>
+            La idea surgió durante una serie de encuentros pedagógicos donde se discutía el futuro de la educación artística en el país. Los fundadores compartían la convicción de que el arte no era solo una actividad extracurricular, sino una herramienta fundamental para el desarrollo integral del ser humano.
+        </p>
+        <p>
+            Así nació el concepto del Liceo de Cultura: un espacio donde la creatividad y el conocimiento académico se potenciarían mutuamente.
+        </p>
+    </IntroHistoriaComponent>
+    <!-- DÉCADAS DE HISTORIA -->
+    <DecadasHistoriaComponent
+            titulo="1999-2009: Los Primeros Pasos"
+            tituloCol1="Los Primeros Pasos"
+            textoCol1={`
+        <p>El liceo inició sus actividades en marzo de 1999 con apenas 45 estudiantes distribuidos en dos cursos de primer año medio. Las instalaciones eran modestas: tres salas de clases adaptadas, una pequeña biblioteca y un taller multiuso que servía tanto para artes visuales como para música.</p>
+        <p>Los primeros años fueron de constante adaptación y crecimiento. Cada año se incorporaba un nuevo nivel hasta completar los cuatro años de enseñanza media en 2002, cuando se graduó la primera promoción con 38 estudiantes.</p>
+    `}
+            tituloCol2="Desafíos Iniciales"
+            listaCol2={[
+                'Conseguir reconocimiento oficial del Ministerio de Educación',
+                'Desarrollar un currículo que equilibrara arte y academia',
+                'Atraer profesores especializados en educación artística',
+                'Establecer convenios con universidades para la continuidad de estudios'
+            ]}
+    />
+
+    <DecadasHistoriaComponent
+            titulo="2010-2019: Consolidación y Expansión"
+            tituloCol1="El Reconocimiento Nacional"
+            textoCol1={`
+        <p>Esta década marcó la consolidación definitiva del liceo como referente nacional. En 2010, el Ministerio de Educación otorgó la distinción de "Establecimiento de Excelencia Artística", reconociendo tanto los resultados académicos como la calidad de la formación artística.</p>
+        <p>Los logros se multiplicaron: primeros lugares en festivales nacionales, becas internacionales para estudiantes destacados, y convenios con universidades prestigiosas que garantizaban el ingreso directo a carreras artísticas.</p>
+    `}
+            tituloCol2="Expansión de Especialidades"
+            listaCol2={[
+                '2012: Se incorpora la especialidad de Danza Contemporánea',
+                '2014: Apertura del taller de Teatro Musical',
+                '2016: Inicio de la especialidad en Diseño Gráfico',
+                '2018: Creación del programa de Música Electrónica'
+            ]}
+    />
+
+    <DecadasHistoriaComponent
+            titulo="2020-2025: Innovación y Tecnología"
+            tituloCol1="Adaptación Digital"
+            textoCol1={`
+        <p>La pandemia de 2020 representó un desafío sin precedentes, pero también una oportunidad única de innovación. El liceo fue pionero en desarrollar metodologías de enseñanza artística virtual, creando plataformas digitales especializadas para cada disciplina.</p>
+        <p>Se implementaron estudios de grabación caseros para música, talleres virtuales de artes visuales, y clases de danza adaptadas a espacios reducidos, manteniendo la calidad educativa a pesar de las restricciones.</p>
+    `}
+            tituloCol2="Nuevas Tecnologías"
+            listaCol2={[
+                'Incorporación de realidad virtual en artes visuales',
+                'Laboratorio de animación 3D y motion graphics',
+                'Estudio de grabación con tecnología 7.1',
+                'Plataforma de streaming para eventos en vivo'
+            ]}
+    />
+    <EvoCampusComponent
+            texto="Las primeras instalaciones consistían en una casona antigua adaptada con tres salas de clases, una biblioteca pequeña y un taller multiuso. A pesar de las limitaciones de espacio, la creatividad de profesores y estudiantes transformó cada rincón en un espacio de aprendizaje artístico."
+            titulo="1999-2005: Instalaciones Iniciales"
+            titulo1="2005-2015: Primera Sede Propia"
+            texto1="La construcción de la primera sede propia marcó un hito fundamental. Diseñada específicamente para la educación artística, incluía estudios especializados con aislamiento acústico, salas de danza con espejos y barras, talleres de artes visuales con iluminación profesional, y un auditorio para 200 personas."
+            titulo2="2015-2025: Campus Tecnológico"
+            texto2="   La última década ha visto la transformación completa del campus con la incorporación de tecnologías de vanguardia. Estudios de grabación profesional, laboratorios de animación digital, salas de realidad virtual, y espacios colaborativos que fomentan la interdisciplinariedad artística."
+    />
+</Layout>

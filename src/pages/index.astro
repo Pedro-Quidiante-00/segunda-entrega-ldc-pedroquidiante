@@ -1,11 +1,55 @@
 ---
-import Welcome from '../components/Welcome.astro';
 import Layout from '../layouts/Layout.astro';
+import HeroIndexComponent from '../components/hero/HeroIndexComponent.astro';
+import NoticiasComponent from '../components/noticias/NoticiasComponent.astro';
+import SobreNosotrosPri from '../components/sobre-nosotros/SobreNosotrosPri.astro'
+import SellosArtisticosComponent from '../components/sellos-artisticos/SellosArtisticosComponent.astro';
+import ServiciosComponent from '../components/servicios-y-recursos/ServiciosComponent.astro'
+import Especialidades from '../components/especialidades/Especialidades.astro';
 
-// Welcome to Astro! Wondering what to do next? Check out the Astro documentation at https://docs.astro.build
-// Don't want to use any of this? Delete everything in this file, the `assets`, `components`, and `layouts` directories, and start fresh.
+
+import heroImage from '../assets/images/bg-img-00.png';
+import sobreNosotrosPri from '../assets/images/bg-img-00.png';
+import selloM from '../assets/images/bg-img-00.png';
+import {ultimasNoticias} from '../components/noticias/DefNoticias.astro'
 ---
 
 <Layout>
-	<Welcome />
+    {/*INDEX PARTE 1*/}
+    <HeroIndexComponent
+            imagen={heroImage}
+            titulo="LICEO DE CULTURA"
+            eslogan="¡¡El arte está en todas partes!!"
+            textoBoton="Descubre Nuestras Especialidades"
+            enlaceBoton="#especialidades"
+    />
+    {/*INDEX PARTE 2*/}
+    <NoticiasComponent
+            titulo="Últimas Noticias"
+            subtitulo="Mantente al día con las últimas novedades, eventos y logros de nuestro liceo."
+            noticias={ultimasNoticias}
+    />
+    {/*INDEX PARTE 3*/}
+    <SobreNosotrosPri
+            titulo="Sobre nosotros"
+            desc={`El Liceo de Cultura es una institución educativa comprometida con la formación integral de sus estudiantes. Con más de 25 años de experiencia, nos dedicamos a brindar una educación de calidad que combine la excelencia académica con el desarrollo de valores humanos.
+            Nuestra metodología innovadora y nuestro equipo de profesionales altamente calificados nos permiten ofrecer una experiencia educativa única, preparando a nuestros estudiantes para los desafíos del siglo XXI.`}
+            imagen={sobreNosotrosPri}
+    />
+    {/*INDEX PARTE 4*/}
+    <SellosArtisticosComponent
+            tituloSec="Nuestros sellos"
+            imagenM={selloM}
+            tituloM="Mision"
+            descM="Formar estudiantes integrales a través de una educación artística de excelencia, fomentando la creatividad, el pensamiento crítico y los valores humanos. Preparamos a nuestros jóvenes para ser agentes de cambio positivo en la sociedad, desarrollando sus talentos artísticos y académicos con pasión y dedicación."
+
+            imagenV={selloM}
+            tituloV="Vision"
+            descV="Ser reconocidos como la institución educativa líder en formación artística integral, donde cada estudiante desarrolle al máximo su potencial creativo y humano. Aspiramos a ser un referente de innovación educativa, contribuyendo al desarrollo cultural de nuestra comunidad y formando ciudadanos comprometidos con el arte y la sociedad.."
+    />
+    {/*INDEX PARTE 5*/}
+    <Especialidades/>
+    {/*INDEX PARTE 6*/}
+    <ServiciosComponent/>
+
 </Layout>

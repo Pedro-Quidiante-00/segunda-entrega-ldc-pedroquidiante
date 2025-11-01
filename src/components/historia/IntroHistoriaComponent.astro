@@ -1,0 +1,25 @@
+---
+import { Image } from 'astro:assets';
+import imgOrigenes from '../../assets/images/bg-img-00.png';
+
+export interface Props {
+    titulo: string;
+}
+const { titulo } = Astro.props;
+---
+<section class="py-16 px-8">
+    <div class="max-w-6xl mx-auto">
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-12 items-center mb-16">
+            <div>
+                <h2 class="text-4xl font-bold text-black mb-6">{titulo}</h2>
+                <div class="space-y-4 text-gray-700 leading-relaxed">
+                    <slot />
+                </div>
+            </div>
+            <div class="w-full h-96 rounded-2xl border-2 border-red-600 flex items-center justify-center overflow-hidden shadow-lg">
+                <Image src={imgOrigenes} alt="Vista de los orígenes del liceo" class="w-full h-full object-cover" />
+            </div>
+
+        </div>
+    </div>
+</section>
