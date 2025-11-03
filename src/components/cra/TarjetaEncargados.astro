@@ -16,18 +16,15 @@ const encargados = [
         iconoSVG: 'M12,4A4,4 0 0,1 16,8A4,4 0 0,1 12,12A4,4 0 0,1 8,8A4,4 0 0,1 12,4M12,14C16.42,14 20,15.79 20,18V20H4V18C4,15.79 7.58,14 12,14Z'
     },
 ];
-interface Props {
-    titulo: string;
-    texto: string;
-}
-const {titulo, texto} = Astro.props
+const tituloSeccion = "Encargadas";
+const subtituloSeccion = "Nuestro equipo dedicado al servicio de la comunidad educativa";
 ---
 <section class="py-16">
     <div class="max-w-6xl mx-auto px-6">
 
         <div class="text-center mb-12">
-            <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-4">{titulo}</h2>
-            <p class="text-lg text-gray-600">{texto}</p>
+            <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-4">{tituloSeccion}</h2>
+            <p class="text-lg text-gray-600">{subtituloSeccion}</p>
         </div>
         <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
             {encargados.map((encargado) => (

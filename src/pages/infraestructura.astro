@@ -1,0 +1,13 @@
+---
+import Layout from '../layouts/Layout.astro';
+import HeroSubPaginaComponent from '../components/ui/HeroSubPaginasComponent.astro'
+import TarjetasInfraComponent from '../components/infraestructura/TarjetasInfraComponent.astro';
+import DescCampusComponent from '../components/infraestructura/DescCampusComponent.astro';
+---
+<Layout>
+    <HeroSubPaginaComponent titulo="Nuestra Infraestructura" subtitulo="Espacios diseñados para potenciar el talento y la creatividad de nuestros estudiantes."/>
+    <DescCampusComponent titulo="Un Campus Diseñado para el Arte"
+                         descripcion={` Nuestra infraestructura no es solo un conjunto de edificios, es un ecosistema cuidadosamente planificado para inspirar, facilitar y potenciar la creación artística. Cada espacio ha sido concebido para responder a las necesidades específicas de las disciplinas que impartimos. </br>
+                                        Desde talleres especializados hasta espacios comunes de encuentro, nuestro campus es el lienzo sobre el cual nuestros estudiantes pintan su futuro.`}/>
+    <TarjetasInfraComponent tituloSec="Nuestras Instalaciones"/>
+</Layout>

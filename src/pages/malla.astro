@@ -1,0 +1,198 @@
+---
+import Layout from '../layouts/Layout.astro';
+import HeroSubPaginaComponent from '../components/ui/HeroSubPaginasComponent.astro'
+import MallaBotonesComponent from '../components/malla/MallaBotonesComponente.astro'
+import MallaBasicaComponent from "../components/malla/MallaBasicaComponent.astro";
+import MallaMediaComponent from "../components/malla/MallaMediaComponent.astro";
+
+const ciclosBasica = [
+    {
+        nombreCiclo: "Primer Ciclo (1° a 4° Básico)",
+        tarjetas: [
+            {
+                titulo: "Formación General",
+                items: [
+                    { asignatura: "Lenguaje y Comunicación", horas: "8 hrs" },
+                    { asignatura: "Matemática", horas: "6 hrs" },
+                    { asignatura: "Historia, Geografía y Cs. Sociales", horas: "3 hrs" },
+                    { asignatura: "Ciencias Naturales", horas: "3 hrs" },
+                    { asignatura: "Educación Física y Salud", horas: "2 hrs" },
+                ]
+            },
+            {
+                titulo: "Exploración Artística",
+                items: [
+                    { asignatura: "Artes Visuales", horas: "2 hrs" },
+                    { asignatura: "Música", horas: "2 hrs" },
+                    { asignatura: "Expresión Corporal (Danza/Teatro)", horas: "2 hrs" },
+                ]
+            }
+        ]
+    },
+    {
+        nombreCiclo: "Segundo Ciclo (5° a 8° Básico)",
+        tarjetas: [
+            {
+                titulo: "Formación General",
+                items: [
+                    { asignatura: "Lengua y Literatura", horas: "6 hrs" },
+                    { asignatura: "Matemática", horas: "6 hrs" },
+                    { asignatura: "Historia, Geografía y Cs. Sociales", horas: "4 hrs" },
+                    { asignatura: "Ciencias Naturales", horas: "4 hrs" },
+                    { asignatura: "Inglés", horas: "3 hrs" },
+                    { asignatura: "Educación Física y Salud", horas: "2 hrs" },
+                ]
+            },
+            {
+                titulo: "Talleres Artísticos Rotativos",
+                items: [
+                    { asignatura: "Taller de Artes Visuales", horas: "3 hrs" },
+                    { asignatura: "Taller de Música (Instrumental)", horas: "3 hrs" },
+                    { asignatura: "Taller de Artes Escénicas", horas: "3 hrs" },
+                    { asignatura: "Taller de Creación Audiovisual", horas: "3 hrs" },
+                ]
+            }
+        ]
+    }
+];
+const ciclosMedia = [
+    {
+        nombreCiclo: "Primer Año Medio",
+        tarjetas: [
+            {
+                titulo: "Formación General",
+                items: [
+                    { asignatura: "Lengua y Literatura", horas: "6 hrs" },
+                    { asignatura: "Matemática", horas: "6 hrs" },
+                    { asignatura: "Historia y Geografía", horas: "4 hrs" },
+                    { asignatura: "Ciencias Naturales", horas: "4 hrs" },
+                    { asignatura: "Inglés", horas: "3 hrs" },
+                    { asignatura: "Educación Física y Salud", horas: "2 hrs" },
+                ]
+            },
+            {
+                titulo: "Formación Artística",
+                items: [
+                    { asignatura: "Taller de Especialidad I", horas: "6 hrs" },
+                    { asignatura: "Historia del Arte Universal", horas: "2 hrs" },
+                    { asignatura: "Lenguajes Artísticos", horas: "2 hrs" },
+                ]
+            }
+        ]
+    },
+    {
+        nombreCiclo: "Segundo Año Medio",
+        tarjetas: [
+            {
+                titulo: "Formación General",
+                items: [
+                    { asignatura: "Lengua y Literatura", horas: "6 hrs" },
+                    { asignatura: "Matemática", horas: "6 hrs" },
+                    { asignatura: "Historia y Geografía", horas: "4 hrs" },
+                    { asignatura: "Física / Química / Biología", horas: "4 hrs" },
+                    { asignatura: "Inglés", horas: "3 hrs" },
+                    { asignatura: "Educación Física y Salud", horas: "2 hrs" },
+                ]
+            },
+            {
+                titulo: "Formación Artística",
+                items: [
+                    { asignatura: "Taller de Especialidad II", horas: "8 hrs" },
+                    { asignatura: "Historia del Arte Chileno", horas: "2 hrs" },
+                    { asignatura: "Teoría del Arte", horas: "2 hrs" },
+                ]
+            }
+        ]
+    },
+    {
+        nombreCiclo: "Tercer Año Medio",
+        tarjetas: [
+            {
+                titulo: "Formación General y Electivos",
+                items: [
+                    { asignatura: "Lengua y Literatura", horas: "4 hrs" },
+                    { asignatura: "Matemática", horas: "4 hrs" },
+                    { asignatura: "Filosofía", horas: "2 hrs" },
+                    { asignatura: "Educación Ciudadana", horas: "2 hrs" },
+                    { asignatura: "Electivo Humanista/Científico", horas: "6 hrs" },
+                ]
+            },
+            {
+                titulo: "Formación Artística Diferenciada",
+                items: [
+                    { asignatura: "Artes Visuales:", contenidoDetallado: "Pintura y Color, Escultura y Volumen, Grabado." },
+                    { asignatura: "Música:", contenidoDetallado: "Instrumento III, Ensamble Musical, Composición." },
+                    { asignatura: "Danza:", contenidoDetallado: "Técnica Contemporánea, Ballet III, Improvisación y Coreografía." },
+                    { asignatura: "Audiovisual:", contenidoDetallado: "Guion y Narrativa, Dirección de Fotografía, Montaje y Edición." },
+                    { asignatura: "Total Horas Diferenciado", horas: "12 hrs" },
+                ]
+            }
+        ]
+    },
+    {
+        nombreCiclo: "Cuarto Año Medio",
+        tarjetas: [
+            {
+                titulo: "Formación General y PAES",
+                items: [
+                    { asignatura: "Lengua y Literatura", horas: "4 hrs" },
+                    { asignatura: "Matemática", horas: "4 hrs" },
+                    { asignatura: "Filosofía", horas: "2 hrs" },
+                    { asignatura: "Electivo Humanista/Científico", horas: "6 hrs" },
+                    { asignatura: "Taller Preparación PAES", horas: "4 hrs" },
+                ]
+            },
+            {
+                titulo: "Proyecto de Título Artístico",
+                items: [
+                    { asignatura: "Artes Visuales:", contenidoDetallado: "Producción Artística, Curatoría y Montaje." },
+                    { asignatura: "Música:", contenidoDetallado: "Producción Musical, Performance en Vivo, Gestión." },
+                    { asignatura: "Danza:", contenidoDetallado: "Puesta en Escena, Interpretación, Producción Escénica." },
+                    { asignatura: "Audiovisual:", contenidoDetallado: "Dirección Cinematográfica, Post-Producción Avanzada." },
+                    { asignatura: "Total Horas Proyecto", horas: "12 hrs" },
+                ]
+            }
+        ]
+    }
+];
+---
+<Layout>
+    <HeroSubPaginaComponent titulo="Malla Curricular" subtitulo="Un viaje educativo desde la exploración inicial en básica hasta la especialización artística en media."/>
+
+    <section class="py-16">
+        <div class="max-w-6xl mx-auto px-6">
+            <MallaBotonesComponent/>
+            <MallaBasicaComponent ciclos={ciclosBasica} />
+            <MallaMediaComponent ciclos={ciclosMedia} />
+        </div>
+    </section>
+
+    <script is:inline>
+        // Hace que lo primero que se muestre sea la malla de basica
+        document.addEventListener('DOMContentLoaded', () => {
+            mostrarSeccion('basica');
+        });
+        function mostrarSeccion(seccionId) {
+            //Oculta contenido anterior
+            document.querySelectorAll('.tab-content').forEach(content => {
+                content.classList.add('hidden');
+            });
+            //Desactiva el estilo de botones
+            document.querySelectorAll('.tab-btn').forEach(btn => {
+                btn.classList.remove('border-red-600', 'text-red-700');
+                btn.classList.add('border-transparent', 'text-gray-500');
+            });
+            //Muestra el contenido
+            const contenido = document.getElementById(`contenido-${seccionId}`);
+            if (contenido) {
+                contenido.classList.remove('hidden');
+            }
+            // Activa el boton
+            const boton = document.getElementById(`btn-${seccionId}`);
+            if (boton) {
+                boton.classList.remove('border-transparent', 'text-gray-500');
+                boton.classList.add('border-red-600', 'text-red-700');
+            }
+        }
+    </script>
+</Layout>

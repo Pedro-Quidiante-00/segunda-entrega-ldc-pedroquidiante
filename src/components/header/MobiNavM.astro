@@ -7,10 +7,8 @@ interface Props {
     submenu: { href: string; icon: string; text: string; }[];
 }
 const { text, icon, submenu } = Astro.props;
-
 const slug = text.toLowerCase().replace(/\s+/g, '-');
 ---
-
 <li>
     <button class="mobile-submenu-trigger w-full menu-mobi-sp" data-target={slug}>
     <span class="flex items-center">
@@ -19,7 +17,6 @@ const slug = text.toLowerCase().replace(/\s+/g, '-');
     </span>
         <Icon name="arrow" class="w-4 h-4 transition-transform duration-300 mobile-arrow" />
     </button>
-
     <div id={`submenu-${slug}`} class="overflow-hidden max-h-0 transition-[max-height] duration-300 ease-in-out mx-8 mt-0">
         <div class="pt-2 space-y-1">
             {submenu.map((item) => (

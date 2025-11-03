@@ -25,13 +25,12 @@ const instalaciones = [
 interface Props {
     tituloSec: string;
 }
-const {tituloSec} = Astro.props;
+const { tituloSec } = Astro.props;
 ---
 <section class="py-16 px-8">
     <div class="max-w-6xl mx-auto">
         <div class="text-center mb-16">
             <h2 class="text-4xl font-bold text-black mb-4">{tituloSec}</h2>
-            <div class="w-24 h-1 bg-red-600 mx-auto rounded-full"></div>
         </div>
         <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
             {instalaciones.map((instalacion) => (

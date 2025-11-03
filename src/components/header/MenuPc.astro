@@ -2,7 +2,6 @@
 import Nav from './Nav.astro';
 import NavM from './NavM.astro';
 ---
-
 <nav class="hidden md:flex">
     <ul class="flex items-center space-x-1">
         <Nav href="/" icon="home" text="Inicio"/>
@@ -10,11 +9,11 @@ import NavM from './NavM.astro';
         <NavM text="Nuestro liceo" icon="school" submenu={[
             { href: "/historia", text: "Historia de Nuestro Liceo", icon: "history" },
             { href: "/documentacion", text: "Documentación", icon: "docu" },
-            { href: "/malla-curricular.html", text: "Malla Curricular", icon: "malla" },
+            { href: "/malla", text: "Malla Curricular", icon: "malla" },
             { href: "/cra.html", text: "CRA", icon: "cra" },
-            { href: "/infraestructura.html", text: "Infraestructura", icon: "infra" },
+            { href: "/infraestructura", text: "Infraestructura", icon: "infra" },
         ]} />
-        <Nav href="#especialidads" icon="light" text="Especialidades"/>
+        <Nav href="/#especialidades" icon="light" text="Especialidades"/>
         <Nav href="/blog" icon="blog" text="Blog"/>
         <Nav href="/contacto" icon="contact" text="Contacto"/>
     </ul>

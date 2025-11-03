@@ -1,23 +1,22 @@
 ---
 type Horario = {
-    dia: string;
-    hora: string;
+    dia: string
+    hora: string
 }
 interface Props {
-    titulo: string;
-    horarios: Horario[];
+    titulo: string
+    horarios: Horario[]
 }
-const { titulo, horarios } = Astro.props;
+const { titulo, horarios } = Astro.props
 ---
-<div class="bg-white p-8 rounded-xl shadow-lg z-40">
-    <h3 class="text-2xl font-bold text-gray-900 mb-4">{titulo}</h3>
-
-    <div class="space-y-3">
+<section class="bg-white p-7 rounded-lg shadow-md">
+    <h3 class="text-2xl font-semibold text-gray-900 mb-5">{titulo}</h3>
+    <div class="space-y-2">
         {horarios.map((horario) => (
-                <div class="flex justify-between items-center p-3 bg-gray-50 rounded-lg">
-                    <span class="font-medium text-gray-700">{horario.dia}</span>
-                    <span class="text-gray-600">{horario.hora}</span>
+                <div class="flex justify-between items-center p-2 bg-gray-100 rounded-md">
+                    <span class="font-medium text-gray-800">{horario.dia}</span>
+                    <span class="text-gray-700">{horario.hora}</span>
                 </div>
         ))}
     </div>
-</div>
+</section>
