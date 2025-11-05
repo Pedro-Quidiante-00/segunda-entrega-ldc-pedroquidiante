@@ -1,5 +1,5 @@
 {
-  "noticias": [
+  "blog": [
     {
       "id": 1,
       "titulo": "Nuevo Taller de Teatro Musical",
@@ -59,38 +59,6 @@
       "categoria": "Música",
       "contenido": "<p>Tendremos un invitado de lujo en el auditorio. El reconocido baterista de jazz y músico nacional, Félix Herrera, visitará nuestro liceo para ofrecer una Clase Magistral exclusiva. Herrera, conocido por su innovador enfoque que fusiona el jazz con ritmos latinoamericanos, ha sido galardonado en múltiples ocasiones y ha girado por Europa y Asia.</p><p>Esta es una oportunidad imperdible para nuestros estudiantes de música. Durante la clase, Herrera compartirá sus técnicas avanzadas de improvisación, 'groove', polirritmia y su filosofía sobre la musicalidad y la escucha activa dentro de un ensamble. 'El ritmo es el corazón de todo', suele decir Herrera, 'y estoy ansioso por compartir mi enfoque con la próxima generación de músicos'.</p><p>La clase se realizará el miércoles 22 de noviembre a las 11:00 hrs en el salón de música principal. Si bien está dirigida a los estudiantes del electivo de música, se abrirán 20 cupos adicionales para otros estudiantes interesados. Las inscripciones se deben realizar con el profesor de música.</p>",
       "enlace": "/blog/clase-bateria"
-    }
-  ],
-  "noticiasPrincipales": [
-    {
-      "id": 1,
-      "titulo": "Nuevo Taller de Teatro Musical",
-      "subtitulo": "Nuestros estudiantes de 3er año exploran el West End en un nuevo montaje intensivo...",
-      "imagen": "../assets/images/articulo-001.png",
-      "alt_imagen": "Estudiantes en taller de teatro",
-      "categoria": "Eventos",
-      "contenido": "<p>Este es el párrafo 1 del artículo sobre el taller.</p><p>Este es el párrafo 2, aquí explicamos más detalles sobre el evento, las fechas y los profesores.</p>",
-      "enlace": "/blog/taller-teatro"
-    },
-    {
-      "id": 2,
-      "titulo": "Exposición Anual de Grabado",
-      "subtitulo": "La generación 2025 presenta sus trabajos finales en la galería de la ciudad...",
-      "imagen": "../assets/images/articulo-002.png",
-      "alt_imagen": "Exposición de arte",
-      "categoria": "Artes Visuales",
-      "contenido": "<p>Este es el párrafo 1 del artículo sobre el taller.</p><p>Este es el párrafo 2, aquí explicamos más detalles sobre el evento, las fechas y los profesores.</p>",
-      "enlace": "/blog/expo-grabado"
-    },
-    {
-      "id": 3,
-      "titulo": "Gira de la Orquesta de Cámara",
-      "subtitulo": "El ensamble del liceo inicia su gira por el sur del país, llevando la música clásica...",
-      "imagen": "../assets/images/articulo-003.png",
-      "alt_imagen": "Orquesta de cámara",
-      "categoria": "Música",
-      "contenido": "<p>Este es el párrafo 1 del artículo sobre el taller.</p><p>Este es el párrafo 2, aquí explicamos más detalles sobre el evento, las fechas y los profesores.</p>",
-      "enlace": "/blog/gira-orquesta"
     }
   ]
 }

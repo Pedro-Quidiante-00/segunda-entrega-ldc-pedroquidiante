@@ -9,9 +9,8 @@
 const { titulo, tituloCol1, textoCol1, tituloCol2, listaCol2 } = Astro.props;
 ---
 <section class="mb-20 max-w-6xl mx-auto bg-white rounded-3xl p-8 shadow-lg">
-    <h3 class="text-3xl font-bold text-red-600 mb-6">{titulo}</h3>
+    <h2 class="text-3xl font-bold text-red-600 mb-6">{titulo}</h2>
     <div class="grid grid-cols-1 md:grid-cols-2 gap-8 mb-8">
-
         <div>
             <h4 class="text-xl font-semibold text-black mb-4">{tituloCol1}</h4>
             <div class="desc-b" set:html={textoCol1} />

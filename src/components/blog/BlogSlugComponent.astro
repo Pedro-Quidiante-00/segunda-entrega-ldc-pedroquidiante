@@ -1,0 +1,19 @@
+---
+import BlogData from '../../data/blog.json';
+export interface Article {
+    id: number;
+    titulo: string;
+    subtitulo: string;
+    imagen: string;
+    alt_imagen: string;
+    categoria: string;
+    contenido: string;
+    enlace: string;
+}
+
+interface LocalBlogData {
+    blog: Article[];
+}
+const data = BlogData as LocalBlogData;
+export const blog: Article[] = data.blog;
+---

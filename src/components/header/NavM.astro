@@ -18,7 +18,6 @@ const { text, icon, submenu } = Astro.props;
         <Icon name="arrow" class="w-4 h-4 ml-1 px-1 transition-transform duration-300 group-hover:rotate-180" />
     </a>
     <div class="menu-m">
-
         {submenu.map((item) => (
                 <a href={item.href} class="menu-md">
                     <Icon name={item.icon} class="menu-i" />

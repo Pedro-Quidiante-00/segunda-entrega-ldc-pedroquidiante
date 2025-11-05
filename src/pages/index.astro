@@ -4,14 +4,12 @@ import HeroIndexComponent from '../components/hero/HeroIndexComponent.astro';
 import SobreNosotrosPri from '../components/sobre-nosotros/SobreNosotrosPri.astro'
 import SellosArtisticosComponent from '../components/sellos-artisticos/SellosArtisticosComponent.astro';
 import ServiciosComponent from '../components/servicios-y-recursos/ServiciosComponent.astro'
-import NoticiasComponent from '../components/noticias/NoticiasComponent.astro'
-import Especialidades from '../components/especialidades/Especialidades.astro';
 
 
 import heroImage from '../assets/images/general/bg-img-00.png';
-import sobreNosotrosPri from '../assets/images/index-001.jpg';
-import selloV from '../assets/images/index-002.png';
-import selloM from '../assets/images/index-003.png';
+import sobreNosotrosPri from '../assets/images/article/index-001.jpg';
+import selloV from '../assets/images/article/index-002.png';
+import selloM from '../assets/images/article/index-003.png';
 ---
 
 <Layout>
@@ -20,13 +18,6 @@ import selloM from '../assets/images/index-003.png';
             imagen={heroImage}
             titulo="LICEO DE CULTURA"
             eslogan="¡¡El arte está en todas partes!!"
-            textoBoton="Descubre Nuestras Especialidades"
-            enlaceBoton="#especialidades"
-    />
-    {/*INDEX PARTE 2*/}
-    <NoticiasComponent
-            titulo="Últimas Noticias"
-            subtitulo="Mantente al día con las últimas novedades, eventos y logros de nuestro liceo."
     />
     {/*INDEX PARTE 3*/}
     <SobreNosotrosPri
@@ -34,6 +25,8 @@ import selloM from '../assets/images/index-003.png';
             desc={`El Liceo de Cultura es una institución educativa comprometida con la formación integral de sus estudiantes. Con más de 25 años de experiencia, nos dedicamos a brindar una educación de calidad que combine la excelencia académica con el desarrollo de valores humanos.
             Nuestra metodología innovadora y nuestro equipo de profesionales altamente calificados nos permiten ofrecer una experiencia educativa única, preparando a nuestros estudiantes para los desafíos del siglo XXI.`}
             imagen={sobreNosotrosPri}
+            boton="saber mas"
+
     />
     {/*INDEX PARTE 4*/}
     <SellosArtisticosComponent
@@ -46,8 +39,6 @@ import selloM from '../assets/images/index-003.png';
             tituloV="Vision"
             descV="Ser reconocidos como la institución educativa líder en formación artística integral, donde cada estudiante desarrolle al máximo su potencial creativo y humano. Aspiramos a ser un referente de innovación educativa, contribuyendo al desarrollo cultural de nuestra comunidad y formando ciudadanos comprometidos con el arte y la sociedad.."
     />
-    {/*INDEX PARTE 5*/}
-    <Especialidades/>
     {/*INDEX PARTE 6*/}
     <ServiciosComponent/>
 

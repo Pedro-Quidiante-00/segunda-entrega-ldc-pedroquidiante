@@ -16,17 +16,14 @@ import "../styles/global.css";
 </head>
 <body class="flex flex-col min-h-screen">
 
-<HeaderComponent />
-
+<HeaderComponent/>
 <main class="flex-grow relative isolate">
 
     <div class="absolute inset-0 -z-10">
         <LineasFondo/>
         <ImagenBg/>
     </div>
-
     <slot />
-
 </main>
 
 <FooterComponent />

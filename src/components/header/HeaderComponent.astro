@@ -1,6 +1,5 @@
 ---
 import MenuPc from './MenuPc.astro';
-import MenuMobi from './MenuMobi.astro';
 import Logo from '../ui/Logo.astro';
 ---
 <header class="header">
@@ -8,14 +7,6 @@ import Logo from '../ui/Logo.astro';
         <div class="flex justify-between items-center h-20 px-4 sm:px-6 lg:px-8">
             <Logo/>
             <MenuPc/>
-            <button id="mobile-menu-button"
-                    class="boton"
-                    aria-label="Abrir menú">
-                <span class="hamburguesa"></span>
-                <span class="hamburguesa"></span>
-                <span class="hamburguesa"></span>
-            </button>
         </div>
-        <MenuMobi/>
     </div>
 </header>

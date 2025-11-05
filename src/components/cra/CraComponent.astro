@@ -1,6 +1,6 @@
 ---
 import {Image} from "astro:assets"
-import ImgCra from "../../assets/images/cra-001.png"
+import ImgCra from "../../assets/images/article/cra-001.png"
 
 interface Props {
     titulo: string;
@@ -23,7 +23,7 @@ const {titulo, texto} = Astro.props
                     {titulo}
 
                 </h2>
-                <p class="text-lg text-gray-600 mb-4 leading-relaxed" set:html={texto}/>
+                <p class="text-lg text-black leading-relaxed" set:html={texto}/>
             </div>
         </div>
     </div>

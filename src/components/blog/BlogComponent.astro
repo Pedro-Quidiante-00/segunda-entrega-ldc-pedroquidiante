@@ -1,6 +1,6 @@
 ---
-import noticiasBlog from '../../data/noticias.json';
-const {noticias} = noticiasBlog;
+import Blog from '../../data/blog.json';
+const {blog} = Blog;
 interface Props {
     titulo: string;
 }
@@ -12,10 +12,10 @@ const{titulo}=Astro.props
             <h2 class="titulos-gen">{titulo}</h2>
         </div>
         <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {noticias.map(Pnoticias => (
+            {blog.map(Pnoticias => (
                     <div class="bg-white rounded-2xl shadow-lg overflow-hidden flex flex-col">
-                        <div class="w-48 h-48 overflow-hidden rounded-full mx-auto">
-                            <img src={Pnoticias.imagen} alt={Pnoticias.alt_imagen} class="w-full h-full object-cover" />
+                        <div class="overflow-hidden w-full mx-auto">
+                            <img src={Pnoticias.imagen} alt={Pnoticias.alt_imagen} class="w-full h-50 object-cover" />
                         </div>
                         <div class="p-6 flex-grow">
                             <p class="text-red-600 text-sm font-semibold mb-2">{Pnoticias.categoria}</p>

@@ -2,8 +2,6 @@
 import Layout from "../layouts/Layout.astro"
 import HeroSubPaginasComponent from "../components/ui/HeroSubPaginasComponent.astro"
 import FormularioComponent from "../components/contactos/FormularioComponent.astro"
-import MapaGoogleComponent from "../components/contactos/MapaGoogleComponent.astro"
-import HorariosComponent from "../components/contactos/HorariosComponent.astro"
 
 const listaDeHorarios = [
     { dia: "Lunes a Viernes", hora: "8:00 - 17:00" },
@@ -14,23 +12,8 @@ const listaDeHorarios = [
 <Layout>
     <HeroSubPaginasComponent titulo="Contacto" subtitulo=" Estamos aquí para responder tus consultas y ayudarte en tu proceso de admisión" />
     <section class="py-16 ">
-        <div class="max-w-6xl mx-auto px-6 ">
-            <div class="grid md:grid-cols-2 gap-12">
+        <div class="max-w-4xl mx-auto px-6 ">
                 <FormularioComponent titulo="Envíanos un Mensaje" subtitulo="Completa el siguiente formulario y nos pondremos en contacto contigo a la brevedad."/>
-                <div class="space-y-8">
-                    <MapaGoogleComponent
-                            titulo="¿Cómo Llegar?"
-                            texto={`
-                             Av. Principal #123<br>
-                             Centro, Ciudad<br>
-                             Código Postal 12345`}
-                            enlace="Ver en Google Maps →"
-                    />
-                    <HorariosComponent
-                            titulo="Horarios de Atención"
-                            horarios={listaDeHorarios}/>
-                </div>
-            </div>
         </div>
     </section>
 </Layout>

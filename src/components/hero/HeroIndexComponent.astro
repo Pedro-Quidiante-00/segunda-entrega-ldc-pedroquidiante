@@ -1,6 +1,6 @@
 ---
 import {Image} from "astro:assets"
-const {imagen, titulo, eslogan, enlaceBoton, textoBoton} = Astro.props
+const {imagen, titulo, eslogan} = Astro.props
 ---
 <section class="h-screen relative">
     <div class="absolute inset-0 z-0">
@@ -11,19 +11,13 @@ const {imagen, titulo, eslogan, enlaceBoton, textoBoton} = Astro.props
         />
     </div>
     <div class="absolute inset-0 bg-black/30 z-10"></div>
-    <div class="relative z-20 h-full flex flex-col items-center justify-center gap-6 px-4">
         {/*TITULO Y SLOGAN*/}
-        <div class="px-12 py-8 rounded-2xl shadow-2xl">
-            <h1 class="text-center font-black text-white text-[clamp(3rem,8vw,7rem)] leading-[0.9] tracking-[0.1em] text-shadow">{titulo}</h1>
+    <div class="relative z-20 h-full flex flex-col items-center justify-center gap-6 px-4">
+        <div class="px-12 py-2 rounded-2xl shadow-2xl">
+            <h1 class="text-center text-8xl font-black text-white text-shadow">{titulo}</h1>
         </div>
-        <p class="text-center text-white font-bold text-[clamp(1.5rem,5vw,3rem)] text-shadow">
+        <p class="text-center text-white font-bold text-4xl text-shadow">
             {eslogan}
         </p>
-        {/*BOTON*/}
-        <a
-                href={enlaceBoton}
-                class="text-shadow no-underline text-3xl text-white font-bold px-8 py-4 rounded-full transition-all duration-300 transform hover:scale-105 bg-red-600">
-            {textoBoton}
-        </a>
     </div>
 </section>

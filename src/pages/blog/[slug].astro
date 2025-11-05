@@ -1,11 +1,10 @@
 ---
 import Layout from '../../layouts/Layout.astro';
-import noticiasBlog from '../../data/noticias.json';
-import HeroSubPaginasComponent from '../../components/ui/HeroSubPaginasComponent.astro';
+import noticiasBlog from '../../data/blog.json';
 
 export async function getStaticPaths() {
-    const { noticias } = noticiasBlog;
-    return noticias.map(articulo => {
+    const { blog } = noticiasBlog;
+    return blog.map(articulo => {
         const slug = articulo.enlace.split('/').pop();
         return {
             params: { slug: slug },
@@ -13,29 +12,29 @@ export async function getStaticPaths() {
         };
     });
 }
-const {noticia} = Astro.props;
+const { noticia } = Astro.props;
 ---
 <Layout>
-    <HeroSubPaginasComponent titulo="Blog y Noticias" subtitulo="Eventos, artículos y novedades de nuestra comunidad artística y académica."/>
     <section class="py-20 px-8">
-        <div class="max-w-5xl mx-auto bg-white shadow-sm md:rounded-lg p-10">
-            <div class="w-full h-72 md:h-96 rounded-2xl shadow-2xl overflow-hidden mb-8">
+        <div class="max-w-6xl mx-auto bg-white px-10 py-10 rounded-lg">
+            <div class="w-full h-72 md:h-96 rounded-2xl shadow-lg overflow-hidden mb-8" >
                 <img
                         src={noticia.imagen}
                         alt={noticia.alt_imagen}
-                        class="w-full h-full object-cover"
-                />
+                        class="w-full h-full object-cover"/>
             </div>
             <span class="text-red-600 text-sm font-semibold mb-3 inline-block">{noticia.categoria}</span>
-            <h1 class="titulos-gen">{noticia.titulo}</h1>
+            <h1 class="text-4xl md:text-5xl font-bold text-black mb-6">
+                {noticia.titulo}
+            </h1>
             <div
-                    class="prose-lg max-w-none text-gray-700 leading-relaxed"
-                    set:html={noticia.contenido}
-            />
+                    class="prose prose-lg max-w-none text-gray-700 leading-relaxed"
+                    set:html={noticia.contenido}/>
             <div class="mt-12">
-                <a href="/blog" class="text-red-600 font-bold hover:text-red-700 transition-all hover:underline">← Volver al Blog</a>
+                <a href="/blog" class="text-red-600 font-bold hover:text-red-700 transition-all hover:underline">
+                    ← Volver al Blog
+                </a>
             </div>
         </div>
     </section>
 </Layout>
-

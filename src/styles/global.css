@@ -23,30 +23,12 @@
         @apply absolute top-full left-0 w-64 bg-white rounded-xl shadow-lg border border-red-600 py-2 hidden group-hover:block;
     }
     .menu-md{
-        @apply flex items-center px-4 py-3 text-gray-700 mx-1 rounded-lg transition-all duration-200 ease-in-out hover:bg-red-50 hover:text-red-700 hover:translate-x-1;
-    }
-    /*MENU MOVIL*/
-    .menu-mobi{
-        @apply flex items-center px-6 py-3 text-white font-medium rounded-xl mx-4 transition-all duration-300 hover:bg-white/10;
-    }
-    .menu-mobi-sp{
-        @apply flex items-center px-4 py-2 text-gray-300 rounded-lg transition-all duration-300 hover:text-white hover:bg-white/10;
-    }
-    /*BOTON MENU MOVIL*/
-    .boton {
-        @apply md:hidden flex flex-col justify-center items-center w-8 h-8 space-y-1.5 p-1 rounded-lg hover:bg-white/10 transition-all duration-300 cursor-pointer; /* Añadí cursor-pointer */
-    }
-    .hamburguesa {
-        @apply block w-6 h-0.5 bg-white transition-all duration-300 ease-in-out;
+        @apply flex items-center px-4 py-3 text-gray-700 mx-1 rounded-lg hover:translate-x-1;
     }
     /*MENU ICONS*/
     .menu-i{
-        @apply w-5 h-5 mr-2 stroke-[1.5];
+        @apply w-5 h-5 mr-2 ;
 
-    }
-    /*HERO MENU*/
-    .text-shadow {
-        @apply drop-shadow-[2px_2px_4px_#000000cc];
     }
     /*SELLOS SECCION*/
     .sello-cont{
